@@ -92,8 +92,8 @@ function CampusPage() {
           <Reveal delay={120}>
             <div className="overflow-hidden rounded-[2rem] shadow-lift">
               <img
-                src={outdoorImg}
-                alt="Children playing outdoors in a garden with trees and a wooden play structure"
+                src={PHOTOS.gardening}
+                alt="Children planting seedlings and watering a raised garden bed in the campus garden"
                 width={1200}
                 height={900}
                 loading="lazy"
