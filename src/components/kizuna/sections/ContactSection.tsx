@@ -20,7 +20,7 @@ const cards = [
   { icon: Clock, label: "Opening Hours", value: SITE_HOURS },
 ];
 
-export function ContactSection() {
+export function ContactSection({ hideHeading = false }: { hideHeading?: boolean }) {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [errors, setErrors] = useState<Record<string, string>>({});
 
@@ -51,11 +51,13 @@ export function ContactSection() {
   return (
     <section className="bg-background py-20 lg:py-28" id="contact">
       <div className="mx-auto max-w-[1400px] px-5 lg:px-10">
-        <SectionHeading
-          eyebrow="Contact"
-          title="Let's Begin Your Child's KIZUNA Journey."
-          subtitle="Share a few details and our team will reach out to guide you."
-        />
+        {hideHeading ? null : (
+          <SectionHeading
+            eyebrow="Contact"
+            title="Let's Begin Your Child's KIZUNA Journey."
+            subtitle="Share a few details and our team will reach out to guide you."
+          />
+        )}
 
         <div className="mt-14 grid gap-8 lg:grid-cols-[0.85fr_1.15fr]">
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">

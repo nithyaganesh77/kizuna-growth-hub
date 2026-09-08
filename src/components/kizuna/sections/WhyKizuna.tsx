@@ -3,15 +3,17 @@ import { SectionHeading } from "../SectionHeading";
 import { Reveal } from "../Reveal";
 import { ToneIcon } from "../icons";
 
-export function WhyKizuna() {
+export function WhyKizuna({ hideHeading = false }: { hideHeading?: boolean }) {
   return (
     <section className="bg-warm py-20 lg:py-28">
       <div className="mx-auto max-w-[1400px] px-5 lg:px-10">
-        <SectionHeading
-          eyebrow="Why KIZUNA"
-          title="Childhood Deserves More Than Academics."
-          subtitle="KIZUNA brings learning, care, creativity, communication, movement and emotional development together in one connected ecosystem."
-        />
+        {hideHeading ? null : (
+          <SectionHeading
+            eyebrow="Why KIZUNA"
+            title="Childhood Deserves More Than Academics."
+            subtitle="KIZUNA brings learning, care, creativity, communication, movement and emotional development together in one connected ecosystem."
+          />
+        )}
 
         <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {FEATURES.map((f, i) => (

@@ -32,7 +32,7 @@ function WhyPage() {
         title="Childhood Deserves More Than Academics."
         subtitle="KIZUNA brings learning, care, creativity, communication, movement and emotional development together in one connected ecosystem."
       />
-      <WhyKizuna />
+      <WhyKizuna hideHeading />
       <BeyondAcademics />
       <ParentBenefits />
       <Testimonials />

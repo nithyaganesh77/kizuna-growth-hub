@@ -29,7 +29,7 @@ function BookVisitPage() {
         title="Come Experience KIZUNA"
         subtitle="See how a space designed around the whole child can transform the hours beyond the school bell."
       />
-      <VisitSection />
+      <VisitSection hideHeading />
       <ParentBenefits />
     </>
   );

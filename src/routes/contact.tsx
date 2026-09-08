@@ -29,7 +29,7 @@ function ContactPage() {
         title="Let's Begin Your Child's KIZUNA Journey."
         subtitle="Tell us a little about your child and our team will guide you to the right experience."
       />
-      <ContactSection />
+      <ContactSection hideHeading />
       <FAQSection />
     </>
   );

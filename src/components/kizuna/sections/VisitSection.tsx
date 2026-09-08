@@ -7,7 +7,7 @@ import { Field, inputClass } from "../Field";
 
 type Errors = Partial<Record<string, string>>;
 
-export function VisitSection() {
+export function VisitSection({ hideHeading = false }: { hideHeading?: boolean }) {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [errors, setErrors] = useState<Errors>({});
 
@@ -38,11 +38,13 @@ export function VisitSection() {
   return (
     <section className="bg-warm py-20 lg:py-28" id="book-a-visit">
       <div className="mx-auto max-w-[1400px] px-5 lg:px-10">
-        <SectionHeading
-          eyebrow="Book a Visit"
-          title="Come Experience KIZUNA"
-          subtitle="See how a space designed around the whole child can transform the hours beyond the school bell."
-        />
+        {hideHeading ? null : (
+          <SectionHeading
+            eyebrow="Book a Visit"
+            title="Come Experience KIZUNA"
+            subtitle="See how a space designed around the whole child can transform the hours beyond the school bell."
+          />
+        )}
 
         <Reveal className="mx-auto mt-12 max-w-3xl">
           <div className="rounded-[2rem] border border-border bg-card p-7 shadow-card sm:p-11">
