@@ -5,7 +5,7 @@ import { SectionHeading } from "../SectionHeading";
 import { Reveal } from "../Reveal";
 import { cn } from "@/lib/utils";
 
-export function GalleryGrid() {
+export function GalleryGrid({ hideHeading = false }: { hideHeading?: boolean }) {
   const [filter, setFilter] = useState<GalleryCategory>("All");
   const [lightbox, setLightbox] = useState<number | null>(null);
   const items = GALLERY_ITEMS.filter((i) => filter === "All" || i.category === filter);
@@ -24,11 +24,13 @@ export function GalleryGrid() {
   return (
     <section className="bg-background py-20 lg:py-28">
       <div className="mx-auto max-w-[1400px] px-5 lg:px-10">
-        <SectionHeading
-          eyebrow="Gallery"
-          title="Moments From Beyond the Bell"
-          subtitle="Everyday scenes of children reading, creating, moving, building and playing together."
-        />
+        {hideHeading ? null : (
+          <SectionHeading
+            eyebrow="Gallery"
+            title="Moments From Beyond the Bell"
+            subtitle="Everyday scenes of children reading, creating, moving, building and playing together."
+          />
+        )}
 
         <div className="mt-10 -mx-5 overflow-x-auto px-5 pb-2 lg:mx-0 lg:px-0">
           <div className="flex w-max gap-2 lg:w-full lg:flex-wrap lg:justify-center">

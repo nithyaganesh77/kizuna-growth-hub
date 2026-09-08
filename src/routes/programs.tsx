@@ -31,7 +31,7 @@ function ProgramsPage() {
         title="Programs Designed Around the Whole Child"
         subtitle="From academic support to creativity, movement, communication and life skills — every experience is designed to help children grow beyond the classroom."
       />
-      <ProgramsGrid withFilter />
+      <ProgramsGrid withFilter hideHeading />
       <AgeFinder />
       <DayTimeline />
       <FinalStatement />

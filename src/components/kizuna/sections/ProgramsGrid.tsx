@@ -8,18 +8,26 @@ import { cn } from "@/lib/utils";
 
 const FILTERS = ["All", ...PROGRAMS.map((p) => p.title)];
 
-export function ProgramsGrid({ withFilter = false }: { withFilter?: boolean }) {
+export function ProgramsGrid({
+  withFilter = false,
+  hideHeading = false,
+}: {
+  withFilter?: boolean;
+  hideHeading?: boolean;
+}) {
   const [active, setActive] = useState("All");
   const shown = active === "All" ? PROGRAMS : PROGRAMS.filter((p) => p.title === active);
 
   return (
     <section className="bg-background py-20 lg:py-28" id="programs">
       <div className="mx-auto max-w-[1400px] px-5 lg:px-10">
-        <SectionHeading
-          eyebrow="Programs"
-          title="Programs Designed Around the Whole Child"
-          subtitle="From academic support to creativity, movement, communication and life skills — every experience is designed to help children grow beyond the classroom."
-        />
+        {hideHeading ? null : (
+          <SectionHeading
+            eyebrow="Programs"
+            title="Programs Designed Around the Whole Child"
+            subtitle="From academic support to creativity, movement, communication and life skills — every experience is designed to help children grow beyond the classroom."
+          />
+        )}
 
         {withFilter ? (
           <div className="mt-10 -mx-5 overflow-x-auto px-5 pb-2 lg:mx-0 lg:px-0">

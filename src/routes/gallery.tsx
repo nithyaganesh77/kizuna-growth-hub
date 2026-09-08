@@ -29,7 +29,7 @@ function GalleryPage() {
         title="Moments From Beyond the Bell"
         subtitle="Everyday scenes of discovery, creativity, movement and friendship."
       />
-      <GalleryGrid />
+      <GalleryGrid hideHeading />
       <FinalStatement />
     </>
   );
