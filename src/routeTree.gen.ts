@@ -10,33 +10,154 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as BookAVisitRouteImport } from './routes/book-a-visit'
+import { Route as CampusRouteImport } from './routes/campus'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as FaqRouteImport } from './routes/faq'
+import { Route as GalleryRouteImport } from './routes/gallery'
+import { Route as ParentCornerRouteImport } from './routes/parent-corner'
+import { Route as ProgramsRouteImport } from './routes/programs'
+import { Route as WhyKizunaRouteImport } from './routes/why-kizuna'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BookAVisitRoute = BookAVisitRouteImport.update({
+  id: '/book-a-visit',
+  path: '/book-a-visit',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CampusRoute = CampusRouteImport.update({
+  id: '/campus',
+  path: '/campus',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FaqRoute = FaqRouteImport.update({
+  id: '/faq',
+  path: '/faq',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GalleryRoute = GalleryRouteImport.update({
+  id: '/gallery',
+  path: '/gallery',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ParentCornerRoute = ParentCornerRouteImport.update({
+  id: '/parent-corner',
+  path: '/parent-corner',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProgramsRoute = ProgramsRouteImport.update({
+  id: '/programs',
+  path: '/programs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WhyKizunaRoute = WhyKizunaRouteImport.update({
+  id: '/why-kizuna',
+  path: '/why-kizuna',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/book-a-visit': typeof BookAVisitRoute
+  '/campus': typeof CampusRoute
+  '/contact': typeof ContactRoute
+  '/faq': typeof FaqRoute
+  '/gallery': typeof GalleryRoute
+  '/parent-corner': typeof ParentCornerRoute
+  '/programs': typeof ProgramsRoute
+  '/why-kizuna': typeof WhyKizunaRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/book-a-visit': typeof BookAVisitRoute
+  '/campus': typeof CampusRoute
+  '/contact': typeof ContactRoute
+  '/faq': typeof FaqRoute
+  '/gallery': typeof GalleryRoute
+  '/parent-corner': typeof ParentCornerRoute
+  '/programs': typeof ProgramsRoute
+  '/why-kizuna': typeof WhyKizunaRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/book-a-visit': typeof BookAVisitRoute
+  '/campus': typeof CampusRoute
+  '/contact': typeof ContactRoute
+  '/faq': typeof FaqRoute
+  '/gallery': typeof GalleryRoute
+  '/parent-corner': typeof ParentCornerRoute
+  '/programs': typeof ProgramsRoute
+  '/why-kizuna': typeof WhyKizunaRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/book-a-visit'
+    | '/campus'
+    | '/contact'
+    | '/faq'
+    | '/gallery'
+    | '/parent-corner'
+    | '/programs'
+    | '/why-kizuna'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/book-a-visit'
+    | '/campus'
+    | '/contact'
+    | '/faq'
+    | '/gallery'
+    | '/parent-corner'
+    | '/programs'
+    | '/why-kizuna'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/book-a-visit'
+    | '/campus'
+    | '/contact'
+    | '/faq'
+    | '/gallery'
+    | '/parent-corner'
+    | '/programs'
+    | '/why-kizuna'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  BookAVisitRoute: typeof BookAVisitRoute
+  CampusRoute: typeof CampusRoute
+  ContactRoute: typeof ContactRoute
+  FaqRoute: typeof FaqRoute
+  GalleryRoute: typeof GalleryRoute
+  ParentCornerRoute: typeof ParentCornerRoute
+  ProgramsRoute: typeof ProgramsRoute
+  WhyKizunaRoute: typeof WhyKizunaRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +169,83 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/book-a-visit': {
+      id: '/book-a-visit'
+      path: '/book-a-visit'
+      fullPath: '/book-a-visit'
+      preLoaderRoute: typeof BookAVisitRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/campus': {
+      id: '/campus'
+      path: '/campus'
+      fullPath: '/campus'
+      preLoaderRoute: typeof CampusRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/faq': {
+      id: '/faq'
+      path: '/faq'
+      fullPath: '/faq'
+      preLoaderRoute: typeof FaqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gallery': {
+      id: '/gallery'
+      path: '/gallery'
+      fullPath: '/gallery'
+      preLoaderRoute: typeof GalleryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/parent-corner': {
+      id: '/parent-corner'
+      path: '/parent-corner'
+      fullPath: '/parent-corner'
+      preLoaderRoute: typeof ParentCornerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/programs': {
+      id: '/programs'
+      path: '/programs'
+      fullPath: '/programs'
+      preLoaderRoute: typeof ProgramsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/why-kizuna': {
+      id: '/why-kizuna'
+      path: '/why-kizuna'
+      fullPath: '/why-kizuna'
+      preLoaderRoute: typeof WhyKizunaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  BookAVisitRoute: BookAVisitRoute,
+  CampusRoute: CampusRoute,
+  ContactRoute: ContactRoute,
+  FaqRoute: FaqRoute,
+  GalleryRoute: GalleryRoute,
+  ParentCornerRoute: ParentCornerRoute,
+  ProgramsRoute: ProgramsRoute,
+  WhyKizunaRoute: WhyKizunaRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
