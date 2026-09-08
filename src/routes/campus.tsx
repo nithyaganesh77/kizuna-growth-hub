@@ -5,7 +5,7 @@ import { PageHeader } from "@/components/kizuna/PageHeader";
 import { Reveal } from "@/components/kizuna/Reveal";
 import { SectionHeading } from "@/components/kizuna/SectionHeading";
 import { CTALink } from "@/components/kizuna/CTAButton";
-import { LEARNING_SPACES } from "@/lib/site";
+import { CAMPUS_HIGHLIGHTS, LEARNING_SPACES } from "@/lib/site";
 import { GalleryGrid } from "@/components/kizuna/sections/GalleryGrid";
 
 const title = "Our Campus | Where Learning Meets Nature — KIZUNA";
@@ -32,7 +32,7 @@ function CampusPage() {
       <PageHeader
         eyebrow="Campus"
         title="Where Learning Meets Nature."
-        subtitle="A thoughtfully designed environment where children can learn, play, explore and connect."
+        subtitle="A campus designed to inspire curiosity, creativity, and lifelong learning."
       />
 
       <section className="bg-background py-16 lg:py-24">
@@ -56,6 +56,27 @@ function CampusPage() {
               connection and discovery.
             </p>
           </Reveal>
+        </div>
+      </section>
+
+      <section className="bg-navy py-20 lg:py-28">
+        <div className="mx-auto max-w-[1400px] px-5 lg:px-10">
+          <SectionHeading
+            eyebrow="Campus Highlights"
+            title="Signature Features"
+            subtitle="Every corner of the campus is designed to spark wonder, movement and meaningful learning."
+            light
+          />
+          <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {CAMPUS_HIGHLIGHTS.map((h, i) => (
+              <Reveal key={h.title} delay={i * 70}>
+                <div className="hover-lift h-full rounded-3xl border border-gold/20 bg-cream/[0.04] p-8">
+                  <h3 className="text-lg font-bold text-cream">{h.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-cream/70">{h.description}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 

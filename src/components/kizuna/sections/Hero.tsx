@@ -55,9 +55,8 @@ export function Hero() {
               className="animate-rise mt-7 max-w-2xl text-base leading-relaxed text-cream/80 sm:text-lg"
               style={{ animationDelay: "320ms" }}
             >
-              A complete child-development ecosystem where children discover their strengths, build
-              meaningful connections, develop life skills and grow into confident, capable
-              individuals.
+              Where learning continues beyond the classroom. A nurturing space for children to
+              discover, grow and thrive while families receive the support they need.
             </p>
             <div
               className="animate-rise mt-9 flex flex-wrap items-center gap-3"
