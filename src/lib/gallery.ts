@@ -91,4 +91,52 @@ export const GALLERY_ITEMS: {
     category: "Events",
     alt: "Families and children gathered on the campus lawn during a community event",
   },
+  {
+    id: "gardening",
+    src: PHOTOS.gardening,
+    category: "Learning",
+    alt: "Children planting seedlings and watering a raised garden bed together",
+  },
+  {
+    id: "numberlogs",
+    src: PHOTOS.numberlogs,
+    category: "Learning",
+    alt: "Wooden log stepping stones numbered one to fifteen laid out on grass for counting play",
+  },
+  {
+    id: "birdfeeders",
+    src: PHOTOS.birdfeeders,
+    category: "Campus",
+    alt: "Garden bird feeders with small birds visiting, part of the nature corner",
+  },
+  {
+    id: "pigeons",
+    src: PHOTOS.pigeons,
+    category: "Campus",
+    alt: "A child kneeling outdoors and gently feeding pigeons",
+  },
+  {
+    id: "climbing",
+    src: PHOTOS.climbing,
+    category: "Sports",
+    alt: "Children climbing and balancing on a large red rope climbing frame",
+  },
+  {
+    id: "waterslide",
+    src: PHOTOS.waterslide,
+    category: "Sports",
+    alt: "Colourful inflatable water slide with a splash pool for summer play days",
+  },
+  {
+    id: "running",
+    src: PHOTOS.running,
+    category: "Sports",
+    alt: "A group of children running happily together across a grassy park",
+  },
+  {
+    id: "playdough",
+    src: PHOTOS.playdough,
+    category: "Creativity",
+    alt: "Toddlers rolling and cutting colourful playdough shapes at a craft table",
+  },
 ];
