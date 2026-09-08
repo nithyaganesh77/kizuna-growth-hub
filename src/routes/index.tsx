@@ -17,9 +17,9 @@ import { VisitSection } from "@/components/kizuna/sections/VisitSection";
 import { ContactSection } from "@/components/kizuna/sections/ContactSection";
 import { FinalStatement } from "@/components/kizuna/sections/FinalStatement";
 
-const title = "KIZUNA | Beyond the Bell — Child Development Ecosystem";
+const title = "KIZUNA | Beyond the Bell — Child Development Campus";
 const description =
-  "KIZUNA is a complete child-development ecosystem for children ages 1.5–12, bringing together learning, childcare, creativity, communication, wellness, life skills and STEM experiences.";
+  "KIZUNA is a child development, after-school learning and parent support campus where learning continues beyond the classroom for children ages 1.5–12.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
