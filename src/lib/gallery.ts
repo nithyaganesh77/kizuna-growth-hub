@@ -5,6 +5,25 @@ import stem from "@/assets/gallery-stem.jpg";
 import campus from "@/assets/campus-architecture.jpg";
 import outdoor from "@/assets/gallery-outdoor.jpg";
 import events from "@/assets/gallery-events.jpg";
+import waterslideAsset from "@/assets/photo-waterslide.jpg.asset.json";
+import climbingAsset from "@/assets/photo-climbing.jpg.asset.json";
+import gardeningAsset from "@/assets/photo-gardening.jpg.asset.json";
+import numberlogsAsset from "@/assets/photo-numberlogs.jpg.asset.json";
+import birdfeedersAsset from "@/assets/photo-birdfeeders.jpg.asset.json";
+import pigeonsAsset from "@/assets/photo-pigeons.jpg.asset.json";
+import runningAsset from "@/assets/photo-running.jpg.asset.json";
+import playdoughAsset from "@/assets/photo-playdough.jpg.asset.json";
+
+export const PHOTOS = {
+  waterslide: waterslideAsset.url,
+  climbing: climbingAsset.url,
+  gardening: gardeningAsset.url,
+  numberlogs: numberlogsAsset.url,
+  birdfeeders: birdfeedersAsset.url,
+  pigeons: pigeonsAsset.url,
+  running: runningAsset.url,
+  playdough: playdoughAsset.url,
+};
 
 export const GALLERY_CATEGORIES = [
   "All",
