@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import campusImg from "@/assets/campus-architecture.jpg";
-import outdoorImg from "@/assets/gallery-outdoor.jpg";
+import { PHOTOS } from "@/lib/gallery";
 import { PageHeader } from "@/components/kizuna/PageHeader";
 import { Reveal } from "@/components/kizuna/Reveal";
 import { SectionHeading } from "@/components/kizuna/SectionHeading";
