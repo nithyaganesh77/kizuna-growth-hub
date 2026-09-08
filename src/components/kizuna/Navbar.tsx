@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link, useRouterState } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
@@ -9,6 +9,8 @@ import { CTALink } from "./CTAButton";
 export function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const overHero = pathname === "/" && !scrolled && !open;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -21,7 +23,7 @@ export function Navbar() {
     <header
       className={cn(
         "sticky top-0 z-50 w-full transition-all duration-300",
-        scrolled ? "border-b border-border/70 bg-ivory/90 backdrop-blur-md" : "bg-transparent",
+        overHero ? "bg-transparent" : "border-b border-border/70 bg-ivory/90 backdrop-blur-md",
       )}
     >
       <nav
@@ -29,7 +31,7 @@ export function Navbar() {
         className="mx-auto flex max-w-[1400px] items-center justify-between gap-6 px-5 py-4 lg:px-10"
       >
         <Link to="/" aria-label="KIZUNA home" onClick={() => setOpen(false)}>
-          <Logo />
+          <Logo variant={overHero ? "cream" : "navy"} />
         </Link>
 
         <ul className="hidden items-center gap-1 xl:flex">
@@ -37,8 +39,15 @@ export function Navbar() {
             <li key={item.to}>
               <Link
                 to={item.to as never}
-                className="rounded-full px-4 py-2 text-sm font-medium text-navy/75 transition-colors hover:bg-accent/60 hover:text-navy"
-                activeProps={{ className: "bg-accent/70 text-navy" }}
+                className={cn(
+                  "rounded-full px-4 py-2 text-sm font-medium transition-colors",
+                  overHero
+                    ? "text-cream/85 hover:bg-cream/10 hover:text-cream"
+                    : "text-navy/75 hover:bg-accent/60 hover:text-navy",
+                )}
+                activeProps={{
+                  className: overHero ? "bg-cream/15 text-cream" : "bg-accent/70 text-navy",
+                }}
                 activeOptions={{ exact: item.to === "/" }}
               >
                 {item.label}
@@ -48,7 +57,11 @@ export function Navbar() {
         </ul>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <CTALink to="/programs" variant="secondary" className="px-5 py-2.5">
+          <CTALink
+            to="/programs"
+            variant={overHero ? "ghostLight" : "secondary"}
+            className="px-5 py-2.5"
+          >
             Explore Programs
           </CTALink>
           <CTALink to="/book-a-visit" className="px-5 py-2.5">
