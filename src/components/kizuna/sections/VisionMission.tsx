@@ -1,5 +1,5 @@
-import { Compass, HeartHandshake } from "lucide-react";
-import { MISSION, VISION } from "@/lib/site";
+import { Compass, HeartHandshake, Lightbulb, Target } from "lucide-react";
+import { BELIEF, MISSION, PURPOSE, SOLUTION, VISION } from "@/lib/site";
 import { Reveal } from "../Reveal";
 
 export function VisionMission() {
@@ -8,8 +8,10 @@ export function VisionMission() {
       <div className="mx-auto max-w-[1400px] px-5 lg:px-10">
         <div className="grid gap-6 lg:grid-cols-2">
           {[
-            { icon: Compass, title: "Our Vision", text: VISION },
-            { icon: HeartHandshake, title: "Our Mission", text: MISSION },
+            { icon: Compass, title: "The Vision", text: VISION },
+            { icon: HeartHandshake, title: "Mission of the Institution", text: MISSION },
+            { icon: Lightbulb, title: "Our Belief", text: `KIZUNA is built on a simple belief: "${BELIEF}"` },
+            { icon: Target, title: "Our Purpose", text: PURPOSE },
           ].map((c, i) => (
             <Reveal key={c.title} delay={i * 120}>
               <div className="h-full rounded-[2rem] border border-gold/25 bg-cream/[0.04] p-9 sm:p-12">
@@ -23,6 +25,13 @@ export function VisionMission() {
             </Reveal>
           ))}
         </div>
+
+        <Reveal delay={200} className="mx-auto mt-10 max-w-4xl text-center">
+          <div className="rounded-[2rem] border border-gold/25 bg-cream/[0.04] p-9 sm:p-12">
+            <p className="text-xs font-semibold tracking-[0.28em] text-gold uppercase">Our Solution</p>
+            <p className="mt-5 text-base leading-relaxed text-cream/80 sm:text-lg">{SOLUTION}</p>
+          </div>
+        </Reveal>
       </div>
     </section>
   );
