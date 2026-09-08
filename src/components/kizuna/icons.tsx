@@ -41,9 +41,9 @@ export function ToneIcon({
   className = "",
 }: {
   name: string;
-  tone?: string;
-  size?: number;
-  className?: string;
+  tone?: string | undefined;
+  size?: number | undefined;
+  className?: string | undefined;
 }) {
   const Icon = ICONS[name] ?? Sparkles;
   return (

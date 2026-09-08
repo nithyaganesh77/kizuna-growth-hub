@@ -94,23 +94,23 @@ export function ContactSection() {
                 </div>
               ) : (
                 <form onSubmit={onSubmit} noValidate className="grid gap-5 sm:grid-cols-2">
-                  <Field label="Name" htmlFor="c-name" error={errors.name}>
+                  <Field label="Name" htmlFor="c-name" error={errors["name"]}>
                     <input
                       id="c-name"
                       name="name"
                       className={inputClass}
                       placeholder="Your full name"
-                      aria-invalid={!!errors.name}
+                      aria-invalid={!!errors["name"]}
                     />
                   </Field>
-                  <Field label="Email" htmlFor="c-email" error={errors.email}>
+                  <Field label="Email" htmlFor="c-email" error={errors["email"]}>
                     <input
                       id="c-email"
                       name="email"
                       type="email"
                       className={inputClass}
                       placeholder="you@example.com"
-                      aria-invalid={!!errors.email}
+                      aria-invalid={!!errors["email"]}
                     />
                   </Field>
                   <Field label="Phone" htmlFor="c-phone">
@@ -142,7 +142,7 @@ export function ContactSection() {
                   <Field
                     label="Message"
                     htmlFor="c-message"
-                    error={errors.message}
+                    error={errors["message"]}
                     className="sm:col-span-2"
                   >
                     <textarea
@@ -151,7 +151,7 @@ export function ContactSection() {
                       rows={5}
                       className={inputClass}
                       placeholder="How can we help?"
-                      aria-invalid={!!errors.message}
+                      aria-invalid={!!errors["message"]}
                     />
                   </Field>
 

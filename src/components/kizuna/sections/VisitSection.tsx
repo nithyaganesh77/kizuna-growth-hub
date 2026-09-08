@@ -55,33 +55,33 @@ export function VisitSection() {
               </div>
             ) : (
               <form onSubmit={onSubmit} noValidate className="grid gap-5 sm:grid-cols-2">
-                <Field label="Parent Name" htmlFor="parentName" error={errors.parentName}>
+                <Field label="Parent Name" htmlFor="parentName" error={errors["parentName"]}>
                   <input
                     id="parentName"
                     name="parentName"
                     className={inputClass}
                     placeholder="Your full name"
-                    aria-invalid={!!errors.parentName}
+                    aria-invalid={!!errors["parentName"]}
                   />
                 </Field>
-                <Field label="Email" htmlFor="email" error={errors.email}>
+                <Field label="Email" htmlFor="email" error={errors["email"]}>
                   <input
                     id="email"
                     name="email"
                     type="email"
                     className={inputClass}
                     placeholder="you@example.com"
-                    aria-invalid={!!errors.email}
+                    aria-invalid={!!errors["email"]}
                   />
                 </Field>
-                <Field label="Phone" htmlFor="phone" error={errors.phone}>
+                <Field label="Phone" htmlFor="phone" error={errors["phone"]}>
                   <input
                     id="phone"
                     name="phone"
                     type="tel"
                     className={inputClass}
                     placeholder="Contact number"
-                    aria-invalid={!!errors.phone}
+                    aria-invalid={!!errors["phone"]}
                   />
                 </Field>
                 <Field label="Child Name" htmlFor="childName">

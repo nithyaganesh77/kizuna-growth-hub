@@ -21,7 +21,7 @@ export function DayTimeline() {
             {DAY_TIMELINE.map((step, i) => (
               <Reveal key={step.key} as="li" delay={i * 70} className="w-[220px] lg:w-auto">
                 <div className="relative flex h-full flex-col items-center rounded-3xl border border-border bg-card p-6 text-center shadow-soft">
-                  <ToneIcon name={step.icon} tone={tones[i]} size={18} />
+                  <ToneIcon name={step.icon} tone={tones[i] ?? "gold"} size={18} />
                   <p className="mt-4 text-xs font-bold tracking-[0.2em] text-navy uppercase">
                     {step.key}
                   </p>
