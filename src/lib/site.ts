@@ -23,10 +23,35 @@ export const NAV_ITEMS = [
 ] as const;
 
 export const VISION =
-  "To reimagine childhood beyond academics, creating a world where every child is inspired to discover, empowered to grow, and prepared to thrive as a confident, compassionate, future-ready individual.";
+  "To reimagine childhood beyond academics, creating a world where every child is inspired to discover, empowered to grow, connected through meaningful bonds, and prepared to thrive as a confident, compassionate, and future-ready individual.";
 
 export const MISSION =
-  "To create a safe, enriching ecosystem where children discover strengths, build meaningful bonds, develop life skills, and grow into capable, confident individuals.";
+  "To redefine after-school learning by providing holistic developmental experiences that foster curiosity, character, connection, and competence, empowering every child to thrive in life and contribute meaningfully to society.";
+
+export const PURPOSE =
+  "KIZUNA aims to create confident, creative, and future-ready children.";
+
+export const BELIEF =
+  "Every child deserves a place where learning continues beyond the bell.";
+
+export const SOLUTION =
+  "KIZUNA provides a nurturing environment where children learn, explore, create, play, and grow beyond school hours while supporting parents with reliable childcare and enrichment programs.";
+
+export const NATIONAL_VISION =
+  "KIZUNA aspires to become a benchmark for future-ready child development campuses. More than an educational venture, it is a long-term commitment to nurturing confident individuals, strengthening families, and shaping a generation equipped to lead, innovate, and contribute to society. Through sustainable growth, scalable impact, and an unwavering focus on holistic development, KIZUNA aims to emerge as a nationally recognized model that transforms the way children learn, grow, and experience the world beyond the classroom.";
+
+export const KEY_DIFFERENTIATOR =
+  "KIZUNA is not a tuition centre, daycare centre, or activity centre. It is an integrated Child Development Campus that combines learning, care, creativity, wellness, life skills, and exploration under one roof.";
+
+export const CAMPUS_HIGHLIGHTS = [
+  { title: "Universe Circle", description: "Signature feature — a space for wonder, gathering and discovery." },
+  { title: "Flower-Inspired Learning Dome", description: "A light-filled, organic learning environment shaped around childhood curiosity." },
+  { title: "Telescope & Sky Observation Zone", description: "Stargazing and sky-watching experiences that expand young minds." },
+  { title: "Mini Planetarium Experience", description: "Immersive journeys through space and science." },
+  { title: "Solar-Powered Green Campus", description: "Sustainable design woven into everyday learning." },
+  { title: "Learning Studios & Reading Corners", description: "Calm, inviting spaces for focus, reading and guided study." },
+  { title: "Outdoor Play & Wellness Spaces", description: "Gardens, play zones and movement areas for healthy bodies and minds." },
+] as const;
 
 export const FEATURES = [
   {
