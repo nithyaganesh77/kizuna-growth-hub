@@ -48,7 +48,7 @@ export function ToneIcon({
   const Icon = ICONS[name] ?? Sparkles;
   return (
     <span
-      className={`inline-flex items-center justify-center rounded-2xl ${TONE_BG[tone] ?? TONE_BG.gold} ${className}`}
+      className={`inline-flex items-center justify-center rounded-2xl ${TONE_BG[tone] ?? TONE_BG["gold"]} ${className}`}
       style={{ width: size * 2.1, height: size * 2.1 }}
     >
       <Icon size={size} strokeWidth={1.7} aria-hidden="true" />

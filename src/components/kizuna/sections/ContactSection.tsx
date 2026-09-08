@@ -32,9 +32,9 @@ export function ContactSection() {
     const email = String(data.get("email") ?? "").trim();
     const message = String(data.get("message") ?? "").trim();
 
-    if (name.length < 2) next.name = "Please enter your name.";
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) next.email = "Please enter a valid email.";
-    if (message.length < 5) next.message = "Please tell us a little more.";
+    if (name.length < 2) next["name"] = "Please enter your name.";
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) next["email"] = "Please enter a valid email.";
+    if (message.length < 5) next["message"] = "Please tell us a little more.";
 
     setErrors(next);
     if (Object.keys(next).length) return;

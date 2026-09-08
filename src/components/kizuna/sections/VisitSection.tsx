@@ -19,9 +19,9 @@ export function VisitSection() {
     const email = String(data.get("email") ?? "").trim();
     const phone = String(data.get("phone") ?? "").trim();
 
-    if (name.length < 2) next.parentName = "Please enter your name.";
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) next.email = "Please enter a valid email.";
-    if (phone.replace(/\D/g, "").length < 7) next.phone = "Please enter a valid phone number.";
+    if (name.length < 2) next["parentName"] = "Please enter your name.";
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) next["email"] = "Please enter a valid email.";
+    if (phone.replace(/\D/g, "").length < 7) next["phone"] = "Please enter a valid phone number.";
 
     setErrors(next);
     if (Object.keys(next).length) return;

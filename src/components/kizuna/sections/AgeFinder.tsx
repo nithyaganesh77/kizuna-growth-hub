@@ -6,7 +6,7 @@ import { CTALink } from "../CTAButton";
 import { cn } from "@/lib/utils";
 
 export function AgeFinder() {
-  const [active, setActive] = useState(AGE_GROUPS[0].id);
+  const [active, setActive] = useState<string>(AGE_GROUPS[0].id);
   const group = AGE_GROUPS.find((g) => g.id === active) ?? AGE_GROUPS[0];
 
   return (
