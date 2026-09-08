@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import logoAsset from "@/assets/kizuna-logo.jpg.asset.json";
 
 export function Logo({
   className,
@@ -8,20 +9,24 @@ export function Logo({
   variant?: "navy" | "cream";
 }) {
   return (
-    <span className={cn("inline-flex flex-col leading-none", className)}>
-      <span
-        className={cn(
-          "font-display text-2xl font-extrabold tracking-[0.32em]",
-          variant === "cream" ? "text-cream" : "text-navy",
-        )}
-      >
-        KIZUNA
-      </span>
-      <span className="mt-1 flex items-center gap-2">
-        <span className="h-px w-6 bg-gold" aria-hidden="true" />
+    <span className={cn("inline-flex items-center gap-3", className)}>
+      <img
+        src={logoAsset.url}
+        alt="KIZUNA — Beyond the Bell logo"
+        className="h-11 w-11 rounded-full object-cover shadow-sm ring-1 ring-navy/10"
+      />
+      <span className="inline-flex flex-col leading-none">
         <span
           className={cn(
-            "text-[0.6rem] font-medium tracking-[0.24em] uppercase",
+            "font-display text-xl font-extrabold tracking-[0.28em]",
+            variant === "cream" ? "text-cream" : "text-navy",
+          )}
+        >
+          KIZUNA
+        </span>
+        <span
+          className={cn(
+            "mt-1 text-[0.58rem] font-medium tracking-[0.22em] uppercase",
             variant === "cream" ? "text-cream/70" : "text-muted-foreground",
           )}
         >
