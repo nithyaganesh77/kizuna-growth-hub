@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import campusImg from "@/assets/campus-architecture.jpg";
-import outdoorImg from "@/assets/gallery-outdoor.jpg";
+import { PHOTOS } from "@/lib/gallery";
 import { PageHeader } from "@/components/kizuna/PageHeader";
 import { Reveal } from "@/components/kizuna/Reveal";
 import { SectionHeading } from "@/components/kizuna/SectionHeading";
@@ -92,8 +92,8 @@ function CampusPage() {
           <Reveal delay={120}>
             <div className="overflow-hidden rounded-[2rem] shadow-lift">
               <img
-                src={outdoorImg}
-                alt="Children playing outdoors in a garden with trees and a wooden play structure"
+                src={PHOTOS.gardening}
+                alt="Children planting seedlings and watering a raised garden bed in the campus garden"
                 width={1200}
                 height={900}
                 loading="lazy"
@@ -101,6 +101,49 @@ function CampusPage() {
               />
             </div>
           </Reveal>
+        </div>
+      </section>
+
+      <section className="bg-warm py-20 lg:py-28">
+        <div className="mx-auto max-w-[1400px] px-5 lg:px-10">
+          <SectionHeading
+            eyebrow="Play Areas"
+            title="Room to Climb, Splash and Run"
+            subtitle="Active play zones and hands-on nature corners that keep every day joyful."
+          />
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            {[
+              {
+                src: PHOTOS.climbing,
+                alt: "Children climbing and balancing on a large red rope climbing frame",
+                label: "Climbing frame",
+              },
+              {
+                src: PHOTOS.waterslide,
+                alt: "Colourful inflatable water slide with a splash pool for summer play days",
+                label: "Splash & slide days",
+              },
+              {
+                src: PHOTOS.numberlogs,
+                alt: "Wooden log stepping stones numbered one to fifteen laid out on grass",
+                label: "Number log trail",
+              },
+            ].map((p, i) => (
+              <Reveal key={p.label} delay={i * 70}>
+                <figure className="overflow-hidden rounded-3xl border border-border bg-card shadow-card">
+                  <img
+                    src={p.src}
+                    alt={p.alt}
+                    loading="lazy"
+                    className="aspect-[4/3] w-full object-cover"
+                  />
+                  <figcaption className="px-6 py-4 text-sm font-semibold text-navy">
+                    {p.label}
+                  </figcaption>
+                </figure>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 

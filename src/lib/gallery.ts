@@ -5,6 +5,25 @@ import stem from "@/assets/gallery-stem.jpg";
 import campus from "@/assets/campus-architecture.jpg";
 import outdoor from "@/assets/gallery-outdoor.jpg";
 import events from "@/assets/gallery-events.jpg";
+import waterslideAsset from "@/assets/photo-waterslide.jpg.asset.json";
+import climbingAsset from "@/assets/photo-climbing.jpg.asset.json";
+import gardeningAsset from "@/assets/photo-gardening.jpg.asset.json";
+import numberlogsAsset from "@/assets/photo-numberlogs.jpg.asset.json";
+import birdfeedersAsset from "@/assets/photo-birdfeeders.jpg.asset.json";
+import pigeonsAsset from "@/assets/photo-pigeons.jpg.asset.json";
+import runningAsset from "@/assets/photo-running.jpg.asset.json";
+import playdoughAsset from "@/assets/photo-playdough.jpg.asset.json";
+
+export const PHOTOS = {
+  waterslide: waterslideAsset.url,
+  climbing: climbingAsset.url,
+  gardening: gardeningAsset.url,
+  numberlogs: numberlogsAsset.url,
+  birdfeeders: birdfeedersAsset.url,
+  pigeons: pigeonsAsset.url,
+  running: runningAsset.url,
+  playdough: playdoughAsset.url,
+};
 
 export const GALLERY_CATEGORIES = [
   "All",
@@ -71,5 +90,53 @@ export const GALLERY_ITEMS: {
     src: events,
     category: "Events",
     alt: "Families and children gathered on the campus lawn during a community event",
+  },
+  {
+    id: "gardening",
+    src: PHOTOS.gardening,
+    category: "Learning",
+    alt: "Children planting seedlings and watering a raised garden bed together",
+  },
+  {
+    id: "numberlogs",
+    src: PHOTOS.numberlogs,
+    category: "Learning",
+    alt: "Wooden log stepping stones numbered one to fifteen laid out on grass for counting play",
+  },
+  {
+    id: "birdfeeders",
+    src: PHOTOS.birdfeeders,
+    category: "Campus",
+    alt: "Garden bird feeders with small birds visiting, part of the nature corner",
+  },
+  {
+    id: "pigeons",
+    src: PHOTOS.pigeons,
+    category: "Campus",
+    alt: "A child kneeling outdoors and gently feeding pigeons",
+  },
+  {
+    id: "climbing",
+    src: PHOTOS.climbing,
+    category: "Sports",
+    alt: "Children climbing and balancing on a large red rope climbing frame",
+  },
+  {
+    id: "waterslide",
+    src: PHOTOS.waterslide,
+    category: "Sports",
+    alt: "Colourful inflatable water slide with a splash pool for summer play days",
+  },
+  {
+    id: "running",
+    src: PHOTOS.running,
+    category: "Sports",
+    alt: "A group of children running happily together across a grassy park",
+  },
+  {
+    id: "playdough",
+    src: PHOTOS.playdough,
+    category: "Creativity",
+    alt: "Toddlers rolling and cutting colourful playdough shapes at a craft table",
   },
 ];
