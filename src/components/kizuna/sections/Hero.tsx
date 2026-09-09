@@ -40,10 +40,17 @@ export function Hero() {
               className="animate-rise mt-7 flex flex-wrap items-center gap-3"
               style={{ animationDelay: "360ms" }}
             >
-              <CTALink to="/programs" className="px-7 py-3.5">
-                Explore Programs <ArrowRight size={17} aria-hidden="true" />
+              <CTALink
+                to="/programs"
+                className="bg-gold px-6 py-3 text-sm font-bold text-navy shadow-none hover:bg-gold/90 hover:shadow-card"
+              >
+                Explore Programs <ArrowRight size={18} strokeWidth={2.25} aria-hidden="true" />
               </CTALink>
-              <CTALink to="/book-a-visit" variant="secondary" className="border-ivory/80 bg-ivory/90 px-7 py-3.5">
+              <CTALink
+                to="/book-a-visit"
+                variant="secondary"
+                className="border-2 border-navy bg-ivory/95 px-6 py-[11px] text-sm font-semibold text-navy shadow-none hover:bg-ivory"
+              >
                 Book a Campus Visit
               </CTALink>
             </div>
