@@ -2,7 +2,12 @@ import learning from "@/assets/gallery-learning.jpg";
 import creativity from "@/assets/gallery-creativity.jpg";
 import sports from "@/assets/gallery-sports.jpg";
 import stem from "@/assets/gallery-stem.jpg";
-import campus from "@/assets/campus-architecture.jpg";
+import campusAerialAsset from "@/assets/campus-aerial.png.asset.json";
+import universeCircleAsset from "@/assets/universe-circle.png.asset.json";
+import campusDomeDayAsset from "@/assets/campus-dome-day.png.asset.json";
+import skyObservationAsset from "@/assets/sky-observation.png.asset.json";
+import campusSunsetAsset from "@/assets/campus-sunset.png.asset.json";
+import telescopeZoneAsset from "@/assets/telescope-zone.png.asset.json";
 import outdoor from "@/assets/gallery-outdoor.jpg";
 import events from "@/assets/gallery-events.jpg";
 import waterslideAsset from "@/assets/photo-waterslide.jpg.asset.json";
@@ -15,6 +20,12 @@ import runningAsset from "@/assets/photo-running.jpg.asset.json";
 import playdoughAsset from "@/assets/photo-playdough.jpg.asset.json";
 
 export const PHOTOS = {
+  campusAerial: campusAerialAsset.url,
+  universeCircle: universeCircleAsset.url,
+  campusDomeDay: campusDomeDayAsset.url,
+  skyObservation: skyObservationAsset.url,
+  campusSunset: campusSunsetAsset.url,
+  telescopeZone: telescopeZoneAsset.url,
   waterslide: waterslideAsset.url,
   climbing: climbingAsset.url,
   gardening: gardeningAsset.url,
@@ -69,9 +80,39 @@ export const GALLERY_ITEMS: {
   },
   {
     id: "architecture",
-    src: campus,
+    src: PHOTOS.campusAerial,
     category: "Campus",
-    alt: "KIZUNA campus building with petal-shaped roof and circular glass dome among trees",
+    alt: "Aerial view of the KIZUNA flower-inspired campus surrounded by gardens and play spaces",
+  },
+  {
+    id: "universe-circle",
+    src: PHOTOS.universeCircle,
+    category: "Campus",
+    alt: "The open-air Universe Circle at KIZUNA framing a bright blue sky",
+  },
+  {
+    id: "dome-day",
+    src: PHOTOS.campusDomeDay,
+    category: "Campus",
+    alt: "Children looking up through the daylight-filled circular learning dome",
+  },
+  {
+    id: "sky-observation",
+    src: PHOTOS.skyObservation,
+    category: "STEM",
+    alt: "Children observing the Milky Way from the KIZUNA sky observation courtyard",
+  },
+  {
+    id: "telescope-zone",
+    src: PHOTOS.telescopeZone,
+    category: "STEM",
+    alt: "Children exploring the night sky with a telescope inside the learning dome",
+  },
+  {
+    id: "campus-sunset",
+    src: PHOTOS.campusSunset,
+    category: "Campus",
+    alt: "Children overlooking the illuminated KIZUNA campus at sunset",
   },
   {
     id: "outdoor",
