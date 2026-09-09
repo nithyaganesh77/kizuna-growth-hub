@@ -2,38 +2,38 @@ import learning from "@/assets/gallery-learning.jpg";
 import creativity from "@/assets/gallery-creativity.jpg";
 import sports from "@/assets/gallery-sports.jpg";
 import stem from "@/assets/gallery-stem.jpg";
-import campusAerialAsset from "@/assets/campus-aerial.png.asset.json";
-import universeCircleAsset from "@/assets/universe-circle.png.asset.json";
-import campusDomeDayAsset from "@/assets/campus-dome-day.png.asset.json";
-import skyObservationAsset from "@/assets/sky-observation.png.asset.json";
-import campusSunsetAsset from "@/assets/campus-sunset.png.asset.json";
-import telescopeZoneAsset from "@/assets/telescope-zone.png.asset.json";
+import campusAerialAsset from "@/assets/campus-aerial.png";
+import universeCircleAsset from "@/assets/universe-circle.png";
+import campusDomeDayAsset from "@/assets/campus-dome-day.png";
+import skyObservationAsset from "@/assets/sky-observation.png";
+import campusSunsetAsset from "@/assets/campus-sunset.png";
+import telescopeZoneAsset from "@/assets/telescope-zone.png";
 import outdoor from "@/assets/gallery-outdoor.jpg";
 import events from "@/assets/gallery-events.jpg";
-import waterslideAsset from "@/assets/photo-waterslide.jpg.asset.json";
-import climbingAsset from "@/assets/photo-climbing.jpg.asset.json";
-import gardeningAsset from "@/assets/photo-gardening.jpg.asset.json";
-import numberlogsAsset from "@/assets/photo-numberlogs.jpg.asset.json";
-import birdfeedersAsset from "@/assets/photo-birdfeeders.jpg.asset.json";
-import pigeonsAsset from "@/assets/photo-pigeons.jpg.asset.json";
-import runningAsset from "@/assets/photo-running.jpg.asset.json";
-import playdoughAsset from "@/assets/photo-playdough.jpg.asset.json";
+import waterslideAsset from "@/assets/photo-waterslide.jpg";
+import climbingAsset from "@/assets/photo-climbing.jpg";
+import gardeningAsset from "@/assets/photo-gardening.jpg";
+import numberlogsAsset from "@/assets/photo-numberlogs.jpg";
+import birdfeedersAsset from "@/assets/photo-birdfeeders.jpg";
+import pigeonsAsset from "@/assets/photo-pigeons.jpg";
+import runningAsset from "@/assets/photo-running.jpg";
+import playdoughAsset from "@/assets/photo-playdough.jpg";
 
 export const PHOTOS = {
-  campusAerial: campusAerialAsset.url,
-  universeCircle: universeCircleAsset.url,
-  campusDomeDay: campusDomeDayAsset.url,
-  skyObservation: skyObservationAsset.url,
-  campusSunset: campusSunsetAsset.url,
-  telescopeZone: telescopeZoneAsset.url,
-  waterslide: waterslideAsset.url,
-  climbing: climbingAsset.url,
-  gardening: gardeningAsset.url,
-  numberlogs: numberlogsAsset.url,
-  birdfeeders: birdfeedersAsset.url,
-  pigeons: pigeonsAsset.url,
-  running: runningAsset.url,
-  playdough: playdoughAsset.url,
+  campusAerial: campusAerialAsset,
+  universeCircle: universeCircleAsset,
+  campusDomeDay: campusDomeDayAsset,
+  skyObservation: skyObservationAsset,
+  campusSunset: campusSunsetAsset,
+  telescopeZone: telescopeZoneAsset,
+  waterslide: waterslideAsset,
+  climbing: climbingAsset,
+  gardening: gardeningAsset,
+  numberlogs: numberlogsAsset,
+  birdfeeders: birdfeedersAsset,
+  pigeons: pigeonsAsset,
+  running: runningAsset,
+  playdough: playdoughAsset,
 };
 
 export const GALLERY_CATEGORIES = [

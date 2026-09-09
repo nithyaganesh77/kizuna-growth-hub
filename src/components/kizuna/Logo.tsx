@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import logoAsset from "@/assets/kizuna-logo.jpg.asset.json";
+import logoAsset from "@/assets/kizuna-logo.jpg";
 
 export function Logo({
   className,
@@ -11,7 +11,7 @@ export function Logo({
   return (
     <span className={cn("inline-flex items-center gap-3", className)}>
       <img
-        src={logoAsset.url}
+        src={logoAsset}
         alt="KIZUNA — Beyond the Bell logo"
         className="h-11 w-11 rounded-full object-cover shadow-sm ring-1 ring-navy/10"
       />

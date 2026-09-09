@@ -1,5 +1,5 @@
 import { ArrowRight } from "lucide-react";
-import campusHeroAsset from "@/assets/kizuna-campus-hero.png.asset.json";
+import campusHeroAsset from "@/assets/kizuna-campus-hero.png";
 import { CTALink } from "../CTAButton";
 
 export function Hero() {
@@ -7,7 +7,7 @@ export function Hero() {
     <section className="relative -mt-[92px] min-h-svh overflow-hidden pt-[92px]">
       <div className="absolute inset-0 -z-10 overflow-hidden">
         <img
-          src={campusHeroAsset.url}
+          src={campusHeroAsset}
           alt="KIZUNA's flower-shaped campus at golden hour, with a central glass dome, landscaped gardens and children's playgrounds"
           width={1672}
           height={941}
