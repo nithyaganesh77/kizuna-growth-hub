@@ -28,27 +28,27 @@ export function Navbar() {
     >
       <nav
         aria-label="Main"
-        className="mx-auto flex max-w-[1400px] items-center justify-between gap-6 px-5 py-4 lg:px-10"
+        className="mx-auto flex max-w-[1440px] items-center justify-between gap-5 px-5 py-3 lg:px-8 xl:px-10"
       >
         <Link to="/" aria-label="KIZUNA home" onClick={() => setOpen(false)}>
           <Logo variant="navy" />
         </Link>
 
-        <ul className="hidden items-center gap-1 xl:flex">
+        <ul className="hidden items-center gap-5 xl:flex 2xl:gap-7">
           {NAV_ITEMS.map((item) => (
             <li key={item.to}>
               <Link
                 to={item.to as never}
                 className={cn(
-                  "rounded-full px-4 py-2 text-sm font-medium transition-colors",
+                   "relative px-1 py-3 text-[13px] font-semibold transition-colors",
                    overHero
-                     ? "text-navy hover:bg-ivory/35"
-                    : "text-navy/75 hover:bg-accent/60 hover:text-navy",
+                     ? "text-navy hover:text-navy-soft"
+                    : "text-navy/75 hover:text-navy",
                 )}
                 activeProps={{
                    className: overHero
-                     ? "rounded-none border-b-2 border-gold bg-transparent text-navy"
-                     : "bg-accent/70 text-navy",
+                     ? "text-navy after:absolute after:inset-x-0 after:bottom-1 after:h-0.5 after:rounded-full after:bg-gold"
+                     : "text-navy after:absolute after:inset-x-0 after:bottom-1 after:h-0.5 after:rounded-full after:bg-gold",
                 }}
                 activeOptions={{ exact: item.to === "/" }}
               >
@@ -66,7 +66,7 @@ export function Navbar() {
           >
             Explore Programs
           </CTALink>
-          <CTALink to="/book-a-visit" className="px-5 py-2.5">
+          <CTALink to="/book-a-visit" className="min-w-32 px-6 py-2.5 text-[13px] font-semibold shadow-none">
             Book a Visit
           </CTALink>
         </div>
