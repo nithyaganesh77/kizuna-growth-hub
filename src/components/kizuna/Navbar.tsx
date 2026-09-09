@@ -31,7 +31,7 @@ export function Navbar() {
         className="mx-auto flex max-w-[1400px] items-center justify-between gap-6 px-5 py-4 lg:px-10"
       >
         <Link to="/" aria-label="KIZUNA home" onClick={() => setOpen(false)}>
-          <Logo variant={overHero ? "cream" : "navy"} />
+          <Logo variant="navy" />
         </Link>
 
         <ul className="hidden items-center gap-1 xl:flex">
@@ -41,12 +41,14 @@ export function Navbar() {
                 to={item.to as never}
                 className={cn(
                   "rounded-full px-4 py-2 text-sm font-medium transition-colors",
-                  overHero
-                    ? "text-cream/85 hover:bg-cream/10 hover:text-cream"
+                   overHero
+                     ? "text-navy hover:bg-ivory/35"
                     : "text-navy/75 hover:bg-accent/60 hover:text-navy",
                 )}
                 activeProps={{
-                  className: overHero ? "bg-cream/15 text-cream" : "bg-accent/70 text-navy",
+                   className: overHero
+                     ? "rounded-none border-b-2 border-gold bg-transparent text-navy"
+                     : "bg-accent/70 text-navy",
                 }}
                 activeOptions={{ exact: item.to === "/" }}
               >
@@ -59,8 +61,8 @@ export function Navbar() {
         <div className="hidden items-center gap-3 lg:flex">
           <CTALink
             to="/programs"
-            variant={overHero ? "ghostLight" : "secondary"}
-            className="px-5 py-2.5"
+            variant="secondary"
+            className={cn("px-5 py-2.5", overHero && "hidden")}
           >
             Explore Programs
           </CTALink>
@@ -81,7 +83,7 @@ export function Navbar() {
             className={cn(
               "inline-flex h-11 w-11 items-center justify-center rounded-full border transition-colors",
               overHero
-                ? "border-cream/35 text-cream hover:bg-cream/10"
+                 ? "border-navy/25 bg-ivory/40 text-navy hover:bg-ivory/70"
                 : "border-navy/20 text-navy hover:bg-accent/60",
             )}
           >
