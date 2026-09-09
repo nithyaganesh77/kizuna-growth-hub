@@ -6,3 +6,5 @@
 
 ## Open
 - [ ] No open tasks
+
+- [ ] Add the six supplied campus images across the Campus page, homepage preview, and gallery
