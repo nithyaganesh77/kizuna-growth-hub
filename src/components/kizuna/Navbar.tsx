@@ -1,4 +1,4 @@
-import { Link, useRouterState } from "@tanstack/react-router";
+﻿import { Link, useRouterState } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
@@ -28,32 +28,24 @@ export function Navbar() {
     >
       <nav
         aria-label="Main"
-        className="mx-auto flex max-w-[1440px] items-center justify-between gap-5 px-5 py-3 lg:px-8 xl:px-10"
+        className="mx-auto flex max-w-[1440px] items-center justify-between gap-4 px-5 py-3 lg:px-8 xl:px-10"
       >
-        <Link
-          to="/"
-          aria-label="KIZUNA home"
-          onClick={() => setOpen(false)}
-          className="xl:hidden"
-        >
+        <Link to="/" aria-label="KIZUNA home" onClick={() => setOpen(false)}>
           <Logo variant="navy" />
         </Link>
 
-        <ul className="hidden items-center gap-5 xl:flex 2xl:gap-7">
+        <ul className="hidden items-center gap-4 lg:flex xl:gap-6">
           {NAV_ITEMS.map((item) => (
             <li key={item.to}>
               <Link
                 to={item.to as never}
                 className={cn(
-                   "relative px-1 py-3 text-[13px] font-semibold transition-colors",
-                   overHero
-                     ? "text-navy hover:text-navy-soft"
-                    : "text-navy/75 hover:text-navy",
+                  "relative px-1 py-3 text-[13px] font-semibold whitespace-nowrap transition-colors",
+                  "text-navy/75 hover:text-navy",
                 )}
                 activeProps={{
-                   className: overHero
-                     ? "text-navy after:absolute after:inset-x-0 after:bottom-1 after:h-0.5 after:rounded-full after:bg-gold"
-                     : "text-navy after:absolute after:inset-x-0 after:bottom-1 after:h-0.5 after:rounded-full after:bg-gold",
+                  className:
+                    "text-navy after:absolute after:inset-x-0 after:bottom-1 after:h-0.5 after:rounded-full after:bg-gold",
                 }}
                 activeOptions={{ exact: item.to === "/" }}
               >
@@ -64,13 +56,16 @@ export function Navbar() {
         </ul>
 
         <div className="hidden items-center lg:flex">
-          <CTALink to="/book-a-visit" className="min-w-32 px-6 py-2.5 text-[13px] font-semibold shadow-none">
+          <CTALink
+            to="/book-a-visit"
+            className="min-w-32 px-6 py-2.5 text-[13px] font-semibold shadow-none"
+          >
             Book a Visit
           </CTALink>
         </div>
 
-        <div className="flex items-center gap-2 xl:hidden">
-          <CTALink to="/book-a-visit" className="px-4 py-2 text-xs lg:hidden">
+        <div className="flex items-center gap-2 lg:hidden">
+          <CTALink to="/book-a-visit" className="px-4 py-2 text-xs">
             Book a Visit
           </CTALink>
           <button
@@ -81,7 +76,7 @@ export function Navbar() {
             className={cn(
               "inline-flex h-11 w-11 items-center justify-center rounded-full border transition-colors",
               overHero
-                 ? "border-navy/25 bg-ivory/40 text-navy hover:bg-ivory/70"
+                ? "border-navy/25 bg-ivory/40 text-navy hover:bg-ivory/70"
                 : "border-navy/20 text-navy hover:bg-accent/60",
             )}
           >
@@ -91,7 +86,7 @@ export function Navbar() {
       </nav>
 
       {open ? (
-        <div className="border-t border-border bg-ivory xl:hidden">
+        <div className="border-t border-border bg-ivory lg:hidden">
           <ul className="mx-auto flex max-w-[1400px] flex-col px-5 py-3">
             {NAV_ITEMS.map((item) => (
               <li key={item.to}>
