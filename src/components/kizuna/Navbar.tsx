@@ -30,7 +30,12 @@ export function Navbar() {
         aria-label="Main"
         className="mx-auto flex max-w-[1440px] items-center justify-between gap-5 px-5 py-3 lg:px-8 xl:px-10"
       >
-        <Link to="/" aria-label="KIZUNA home" onClick={() => setOpen(false)}>
+        <Link
+          to="/"
+          aria-label="KIZUNA home"
+          onClick={() => setOpen(false)}
+          className="xl:hidden"
+        >
           <Logo variant="navy" />
         </Link>
 
@@ -58,14 +63,7 @@ export function Navbar() {
           ))}
         </ul>
 
-        <div className="hidden items-center gap-3 lg:flex">
-          <CTALink
-            to="/programs"
-            variant="secondary"
-            className={cn("px-5 py-2.5", overHero && "hidden")}
-          >
-            Explore Programs
-          </CTALink>
+        <div className="hidden items-center lg:flex">
           <CTALink to="/book-a-visit" className="min-w-32 px-6 py-2.5 text-[13px] font-semibold shadow-none">
             Book a Visit
           </CTALink>
@@ -106,16 +104,6 @@ export function Navbar() {
                 </Link>
               </li>
             ))}
-            <li className="pt-4">
-              <CTALink
-                to="/programs"
-                variant="secondary"
-                className="w-full"
-                onClick={() => setOpen(false)}
-              >
-                Explore Programs
-              </CTALink>
-            </li>
           </ul>
         </div>
       ) : null}
