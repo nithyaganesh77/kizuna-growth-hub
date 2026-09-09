@@ -10,3 +10,4 @@
 - [x] Add the six supplied campus images across the Campus page, homepage preview, and gallery
 
 - [x] Rebuild the homepage to match the supplied reference exactly
+- [x] Replace the homepage hero with the supplied golden-hour KIZUNA campus image
