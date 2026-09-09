@@ -1,15 +1,7 @@
 import { useEffect, useState } from "react";
-import heroImg from "@/assets/hero-campus.jpg";
+import { ArrowRight } from "lucide-react";
+import campusAerialAsset from "@/assets/campus-aerial.png.asset.json";
 import { CTALink } from "../CTAButton";
-import { ToneIcon } from "../icons";
-
-const chips = [
-  { icon: "book", label: "Learning", tone: "gold" },
-  { icon: "palette", label: "Creativity", tone: "apricot" },
-  { icon: "activity", label: "Movement", tone: "leaf" },
-  { icon: "heart", label: "Well-being", tone: "coral" },
-  { icon: "compass", label: "Life Skills", tone: "sky" },
-];
 
 export function Hero() {
   const [offset, setOffset] = useState(0);
@@ -21,77 +13,71 @@ export function Hero() {
   }, []);
 
   return (
-    <section className="relative -mt-[92px] flex min-h-[92svh] items-end overflow-hidden pt-[92px]">
+    <section className="relative -mt-[92px] min-h-[92svh] overflow-hidden pt-[92px]">
       <div className="absolute inset-0 -z-10 overflow-hidden">
         <img
-          src={heroImg}
-          alt="KIZUNA campus at golden hour with petal-shaped roof, glass dome, gardens and children walking with parents"
-          width={1920}
-          height={1088}
-          className="animate-slow-zoom h-full w-full object-cover"
+          src={campusAerialAsset.url}
+          alt="Aerial view of the KIZUNA flower-inspired campus surrounded by gardens and play spaces"
+          width={1672}
+          height={941}
+          fetchPriority="high"
+          className="animate-slow-zoom h-full w-full object-cover object-center"
           style={{ transform: `translate3d(0, ${offset}px, 0)` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-navy/85 via-navy/45 to-navy/25" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,color-mix(in_oklab,var(--cream)_82%,transparent)_0%,color-mix(in_oklab,var(--cream)_58%,transparent)_28%,transparent_58%)]" />
+        <div className="absolute inset-x-0 top-0 h-36 bg-gradient-to-b from-cream/55 to-transparent" />
       </div>
 
-      <div className="mx-auto w-full max-w-[1400px] px-5 pt-24 pb-16 lg:px-10 lg:pb-24">
-        <div className="grid items-end gap-10 lg:grid-cols-[1.35fr_0.65fr]">
-          <div>
-            <p
-              className="animate-rise text-xs font-semibold tracking-[0.32em] text-gold uppercase"
-              style={{ animationDelay: "60ms" }}
-            >
-              KIZUNA · Beyond the Bell
-            </p>
+      <div className="mx-auto flex min-h-[calc(92svh-92px)] w-full max-w-[1400px] items-start px-5 pt-14 pb-20 sm:pt-20 lg:px-10 lg:pt-24">
+        <div className="grid w-full gap-10 lg:grid-cols-[1fr_0.72fr]">
+          <div className="max-w-[580px]">
             <h1
-              className="animate-rise mt-6 text-4xl leading-[1.03] font-extrabold text-cream sm:text-6xl lg:text-7xl"
-              style={{ animationDelay: "180ms" }}
+              className="animate-rise text-5xl leading-[0.98] font-extrabold text-navy sm:text-6xl lg:text-7xl"
+              style={{ animationDelay: "80ms" }}
             >
               Beyond the Bell.
               <br />
               Beyond Academics.
             </h1>
             <p
-              className="animate-rise mt-7 max-w-2xl text-base leading-relaxed text-cream/80 sm:text-lg"
-              style={{ animationDelay: "320ms" }}
+              className="animate-rise mt-6 max-w-[520px] text-base leading-relaxed font-medium text-navy/85 sm:text-lg"
+              style={{ animationDelay: "220ms" }}
             >
-              Where learning continues beyond the classroom. A nurturing space for children to
-              discover, grow and thrive while families receive the support they need.
+              A complete child-development ecosystem where children discover their strengths,
+              build meaningful connections, develop life skills and grow into confident, capable
+              individuals.
             </p>
             <div
-              className="animate-rise mt-9 flex flex-wrap items-center gap-3"
-              style={{ animationDelay: "460ms" }}
+              className="animate-rise mt-7 flex flex-wrap items-center gap-3"
+              style={{ animationDelay: "360ms" }}
             >
-              <CTALink to="/programs">Explore Programs</CTALink>
-              <CTALink to="/book-a-visit" variant="ghostLight">
+              <CTALink to="/programs" className="px-7 py-3.5">
+                Explore Programs <ArrowRight size={17} aria-hidden="true" />
+              </CTALink>
+              <CTALink to="/book-a-visit" variant="secondary" className="border-navy/70 bg-ivory/80 px-7 py-3.5">
                 Book a Campus Visit
               </CTALink>
             </div>
             <p
-              className="animate-rise mt-5 text-sm text-cream/60"
-              style={{ animationDelay: "560ms" }}
+              className="animate-rise mt-4 text-sm font-medium text-navy/80"
+              style={{ animationDelay: "470ms" }}
             >
               Designed for children ages 1.5–12
             </p>
           </div>
 
-          <div
-            className="animate-rise rounded-3xl border border-cream/20 bg-ivory/92 p-6 shadow-lift backdrop-blur-sm"
-            style={{ animationDelay: "660ms" }}
-          >
-            <p className="text-lg font-bold text-navy">
-              One ecosystem.
+          <div className="hidden justify-end pt-12 lg:flex">
+            <p
+              className="animate-rise max-w-[270px] rotate-[-4deg] text-center font-display text-3xl leading-tight font-semibold italic text-navy"
+              style={{ animationDelay: "520ms" }}
+            >
+              A brighter,
               <br />
-              Many ways to grow.
+              tomorrow begins
+              <br />
+              here.
+              <span className="mx-auto mt-3 block h-1 w-28 rotate-[-8deg] rounded-full bg-gold" />
             </p>
-            <ul className="mt-5 space-y-3">
-              {chips.map((c) => (
-                <li key={c.label} className="flex items-center gap-3">
-                  <ToneIcon name={c.icon} tone={c.tone} size={16} />
-                  <span className="text-sm font-medium text-navy/80">{c.label}</span>
-                </li>
-              ))}
-            </ul>
           </div>
         </div>
       </div>

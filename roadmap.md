@@ -8,3 +8,5 @@
 - No open tasks
 
 - [x] Add the six supplied campus images across the Campus page, homepage preview, and gallery
+
+- [x] Rebuild the homepage to match the supplied reference exactly
