@@ -1,4 +1,4 @@
-import campusImg from "@/assets/campus-architecture.jpg";
+import { PHOTOS } from "@/lib/gallery";
 import { Reveal } from "../Reveal";
 import { CTALink } from "../CTAButton";
 
@@ -10,10 +10,10 @@ export function CampusPreview() {
           <Reveal>
             <div className="overflow-hidden rounded-[2rem] shadow-lift">
               <img
-                src={campusImg}
-                alt="KIZUNA campus architecture with petal-shaped roof, circular glass dome, timber façades and gardens"
-                width={1600}
-                height={1008}
+                src={PHOTOS.campusAerial}
+                alt="Aerial view of the KIZUNA flower-inspired campus surrounded by gardens and play spaces"
+                width={1672}
+                height={941}
                 loading="lazy"
                 className="h-full w-full object-cover transition-transform duration-[1.2s] hover:scale-[1.03]"
               />

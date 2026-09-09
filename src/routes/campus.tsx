@@ -1,5 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import campusImg from "@/assets/campus-architecture.jpg";
 import { PHOTOS } from "@/lib/gallery";
 import { PageHeader } from "@/components/kizuna/PageHeader";
 import { Reveal } from "@/components/kizuna/Reveal";
@@ -40,10 +39,10 @@ function CampusPage() {
           <Reveal>
             <div className="overflow-hidden rounded-[2rem] shadow-lift">
               <img
-                src={campusImg}
-                alt="KIZUNA campus building with flower-petal roof, circular glass dome and landscaped gardens"
-                width={1600}
-                height={1008}
+                src={PHOTOS.campusAerial}
+                alt="Aerial view of the KIZUNA flower-inspired campus surrounded by gardens and play spaces"
+                width={1672}
+                height={941}
                 loading="lazy"
                 className="h-full w-full object-cover"
               />
@@ -74,6 +73,92 @@ function CampusPage() {
                   <h3 className="text-lg font-bold text-cream">{h.title}</h3>
                   <p className="mt-3 text-sm leading-relaxed text-cream/70">{h.description}</p>
                 </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-background py-20 lg:py-28">
+        <div className="mx-auto max-w-[1400px] px-5 lg:px-10">
+          <SectionHeading
+            eyebrow="Universe Circle"
+            title="A Window to Wonder"
+            subtitle="At the heart of the campus, a light-filled circle opens learning to the sky by day and the stars by night."
+          />
+          <div className="mt-12 grid gap-6 lg:grid-cols-2">
+            {[
+              {
+                src: PHOTOS.universeCircle,
+                alt: "The open-air Universe Circle at KIZUNA framing a bright blue sky",
+                label: "Flower-Inspired Learning Dome",
+              },
+              {
+                src: PHOTOS.campusDomeDay,
+                alt: "Children looking up through the daylight-filled circular learning dome",
+                label: "Learning Beneath the Sky",
+              },
+            ].map((image, i) => (
+              <Reveal key={image.label} delay={i * 90}>
+                <figure className="overflow-hidden rounded-3xl border border-border bg-card shadow-card">
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    width={1672}
+                    height={941}
+                    loading="lazy"
+                    className="aspect-video w-full object-cover"
+                  />
+                  <figcaption className="px-6 py-4 text-sm font-semibold text-navy">
+                    {image.label}
+                  </figcaption>
+                </figure>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-navy py-20 lg:py-28">
+        <div className="mx-auto max-w-[1400px] px-5 lg:px-10">
+          <SectionHeading
+            eyebrow="Sky Observation"
+            title="Curiosity That Reaches the Stars"
+            subtitle="The telescope zone and night-sky experiences turn astronomy into a shared adventure."
+            light
+          />
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            {[
+              {
+                src: PHOTOS.telescopeZone,
+                alt: "Children exploring the night sky with a telescope inside the learning dome",
+                label: "Telescope Zone",
+              },
+              {
+                src: PHOTOS.skyObservation,
+                alt: "Children observing the Milky Way from the KIZUNA sky observation courtyard",
+                label: "Sky Observation",
+              },
+              {
+                src: PHOTOS.campusSunset,
+                alt: "Children overlooking the illuminated KIZUNA campus at sunset",
+                label: "A Campus Beyond the Bell",
+              },
+            ].map((image, i) => (
+              <Reveal key={image.label} delay={i * 90}>
+                <figure className="overflow-hidden rounded-3xl border border-cream/15 bg-cream/[0.04]">
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    width={1672}
+                    height={941}
+                    loading="lazy"
+                    className="aspect-[4/3] w-full object-cover"
+                  />
+                  <figcaption className="px-6 py-4 text-sm font-semibold text-cream">
+                    {image.label}
+                  </figcaption>
+                </figure>
               </Reveal>
             ))}
           </div>

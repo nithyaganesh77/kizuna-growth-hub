@@ -5,4 +5,6 @@
 - [x] Replace placeholder testimonials with real parent quotes and details
 
 ## Open
-- [ ] No open tasks
+- No open tasks
+
+- [x] Add the six supplied campus images across the Campus page, homepage preview, and gallery
