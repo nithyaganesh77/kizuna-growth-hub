@@ -253,11 +253,29 @@ export const PARENT_BENEFITS = [
   },
 ] as const;
 
-// Replace with real parent testimonials when available.
+// Parent testimonials shared for the KIZUNA website.
 export const TESTIMONIALS = [
-  { id: 1, quote: "Parent testimonial will appear here.", author: "Parent name", meta: "Child age" },
-  { id: 2, quote: "Parent testimonial will appear here.", author: "Parent name", meta: "Child age" },
-  { id: 3, quote: "Parent testimonial will appear here.", author: "Parent name", meta: "Child age" },
+  {
+    id: 1,
+    quote:
+      "KIZUNA gives children a wonderful balance of learning, creativity and meaningful activities beyond the school day. It feels like a place where children can truly discover what they enjoy.",
+    author: "Parent of a 6-year-old",
+    meta: "Age 6",
+  },
+  {
+    id: 2,
+    quote:
+      "What stood out to us was the focus on the whole child — not just academics, but communication, confidence, creativity, teamwork and well-being.",
+    author: "Parent of a 9-year-old",
+    meta: "Age 9",
+  },
+  {
+    id: 3,
+    quote:
+      "The idea of bringing learning, activities and development together in one nurturing environment is exactly what modern families need.",
+    author: "Parent of a STEM & Robotics student",
+    meta: "STEM & Robotics",
+  },
 ] as const;
 
 export const FAQS = [
